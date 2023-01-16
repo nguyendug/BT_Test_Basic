@@ -8,24 +8,24 @@ console.log(`a + b = `, sum(5, 3))
 */
 
 //Kiểm tra giá trị
-console.log(`==========================================`)
-console.log(`Kiểm tra giá trị đầu vào là giá trị âm hay dương`)
+console.log(`==========================================`);
+console.log(`Kiểm tra giá trị đầu vào là giá trị âm hay dương`);
 
 //tự code
 //console.log(`---------------------------`)
-let m = prompt('Nhập số phân tử muốn kiểm tra: ')
+let m = prompt("Nhập số phân tử muốn kiểm tra: ");
 for (let i = 1; i <= m; i++) {
-    let t = prompt('Nhập giá trị: ')
-    const check = (a) => {
-        let kt = `${a} không la số dương cũng không là số âm`;
-        if (a > 0) {
-            return (`${a} là số dương`);
-        } else if (a < 0) {
-            return (`${a} là số âm`);
-        }
-        return kt;
+  let t = prompt("Nhập giá trị: ");
+  const check = (a) => {
+    let kt = `${a} không la số dương cũng không là số âm`;
+    if (a > 0) {
+      return `${a} là số dương`;
+    } else if (a < 0) {
+      return `${a} là số âm`;
     }
-    console.log(check(t));
+    return kt;
+  };
+  console.log(check(t));
 }
 
 /*

@@ -1,9 +1,11 @@
 let n = prompt("Nhập số nguyên n <=20");
-const check = (n) => {
-    if (n == 0 || n == 1) {
-        return 1;
-    }
-    return check(n - 1) + check(n - 2);
+if (n > 20) {
+  alert("Bạn vừa nhập n không đúng điều kiện!! Mời bạn nhập lại!!");
+  n = prompt("Nhập số nguyên n <=20");
 }
-console.log(`Số fibonaci tương ứng với ${n} là: `, check(n));
 
+let fib = [0, 1];
+for (i = 2; i <= n; i++) {
+  fib[i] = fib[i - 2] + fib[i - 1];
+  console.log(`Số fibonaci tương ứng với ${i} là: `, fib[i]);
+}
